@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 1.5rem;
+    background-color: #4db6ac;
+}
+
+.main .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 34, 34);
+}
+
+.main .section .article {
+    width: 80%;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .section .article div[class*="div-"] {
+    background-color: white;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.main .section .article div[class*="div-"] div {
+    padding: 0.5rem;
+}
+
+.main .section .article div[class*="div-"]:hover{
+    background-color: #757575;
+    transition: background-color 2s;
+}
+
+.main .section .article div[class*="div-"] div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main .section .article div[class*="div-"] div:nth-child(1) h1 {
+    position: absolute;
+    top: 37px;
+}
+
+.main .section .article div[class*="div-"] div:nth-child(1) figure {
+    width: 40%;
+    height: 100px;
+}
+
+.main .section .article div[class*="div-"] div:nth-child(1) figure img {
+    width: 100%;
+    height: auto;
+    animation: moveImg 10s linear infinite;
+    animation-play-state: paused;
+}
+
+.main .section .article div[class*="div-"] div:nth-child(4) button{
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: slategray;
+    color: white;
+}
+
+.main .section .article div[class*="div-"]:hover div:nth-child(1) figure img {
+    animation-play-state: running;
+}
+
+.main .section .article div[class*="div-"]:hover div:nth-child(1) {
+    animation-name: moveDiv1;
+    animation-duration: 0.7s;
+}
+
+.main .section .article div[class*="div-"]:hover div:nth-child(2) {
+    animation-name: moveDiv2;
+    animation-duration: 1s;
+}
+
+.main .section .article div[class*="div-"]:hover div:nth-child(3) {
+    animation-name: moveDiv3;
+    animation-duration: 1.5s;
+}
+
+.main .section .article div[class*="div-"]:hover div:nth-child(4) button{
+    background-color: white;
+    color: black;
+    transition: background-color 2s, color 2s;
+}
+
+@keyframes moveDiv1 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0px, -50px);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDiv2 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0px, -10px);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveImg {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveDiv3 {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0px, 50px);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
