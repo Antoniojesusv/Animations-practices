@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #ff7043;
+    padding: 1.5rem;
+}
+
+.main .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.main .section article[class*="article"] {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 2.5rem 0rem 2.5rem 0rem;
+}
+
+.main .section article[class*="article"] div[class*="div-container-"] {
+    width: 25%;
+    position: relative;
+}
+
+.main .section .article-1 div[class*="div-container-"] div[class*="div-"] {
+    width: 20vw;
+    height: 20vw;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 {
+    position: absolute;
+    background-color: #ff8a65;
+    z-index: -1;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 div {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    color: white;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 div:nth-child(1) {
+    width: 30%;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.2vw;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 div:nth-child(2) {
+    width: 70%;
+    height: 0.13rem;
+    background-color: white;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 div:nth-child(3) {
+    font-size: 1.2vw;
+}
+
+.main .section .article-1 div[class*="div-container-"] .div-1 div:nth-child(4) {
+    width: 5vw;
+    height: 5vw;
+    font-size: 0.8vw;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffccbc;
+    display: flex;
+    align-items: center;
+    transform-origin: 50% 100%;
+}
+
+.main .section .article-1 div[class*="div-container-"]:hover .div-1 div:nth-child(4) {
+    animation-name: rotateDiv;
+    animation-duration: 0.7s;
+}
+
+.main .section .article-1 .div-container-1 .div-2 {
+    background: url("https://media.gettyimages.com/vectors/retro-travel-sticker-vector-id166009501?s=170667a") no-repeat center;
+    transform-origin: 97% 45%;
+    transition: 0.7s;
+}
+
+.main .section .article-1 .div-container-2 .div-2 {
+    background: url("https://i.pinimg.com/736x/f4/5c/11/f45c11269e4b607ccff9087c5feb7a7a.jpg") no-repeat center;
+    transform-origin: 97% 45%;
+    transition: 0.7s;
+}
+
+.main .section .article-1 .div-container-3 .div-2 {
+    background: url("http://media.gettyimages.com/vectors/retro-old-faithful-sticker-vector-id114267401?s=170667a") no-repeat center;
+    transform-origin: 97% 45%;
+    transition: 0.7s;
+}
+
+.main .section .article-1 .div-container-1:hover .div-2 {
+    transform: rotate(-120deg);
+    transition: transform 0.7s;
+}
+
+.main .section .article-1 .div-container-2:hover .div-2 {
+    transform: rotate(-120deg);
+    transition: transform 0.7s;
+}
+
+.main .section .article-1 .div-container-3:hover .div-2 {
+    transform: rotate(-120deg);
+    transition: transform 0.7s;
+}
+
+@keyframes rotateDiv {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* article-2 */
+
+.main .section .article-2 div[class*="div-container-"] {
+    display: flex;
+    justify-content: center;
+    font-size: 1.7vw;
+    align-items: center;
+    perspective: 600;
+}
+
+.main .section .article-2 div[class*="div-container-"] .div-1 {
+    width: 20vw;
+    height: 20vw;
+    border: 2vw solid #c5e1a5;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.main .section .article-2 div[class*="div-container-"] .card {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+.main .section .article-2 div[class*="div-container-"]:hover .card {
+    transform: rotateY(180deg);
+}
+
+.main .section .article-2 div[class*="div-container-"] .card .side {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.main .section .article-2 div[class*="div-container-"] .card .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8bc34a;
+    transform: rotateY(180deg);
+}
+
+.main .section .article-2 .div-container-1 .card div:nth-child(1) {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RSTevLFUQrm3c55ItlwedZkHGeajyyl6z9byRm2UQs3EMxkPtw") no-repeat center;
+}
+
+.main .section .article-2 .div-container-2 .card div:nth-child(1) {
+    background: url("https://bitstickers.net/wp-content/uploads/2013/12/btc-gold-400x400.jpg") no-repeat center;
+}
+
+.main .section .article-2 .div-container-3 .card div:nth-child(1) {
+    background: url("https://bitstickers.net/wp-content/uploads/2013/12/btc-coin-400x400.jpg") no-repeat center;
+}
+
+/*article-3*/
+
+.main .section .article-3 div[class*="div-container-"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    position: relative;
+}
+
+.main .section .article-3 div[class*="div-container-"] .div-1 {
+    width: 20vw;
+    height: 20vw;
+    border: 2vw solid #81d4fa;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.main .section .article-3 div[class*="div-container-"] .div-2 {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    position: absolute;
+    background: url("https://orig00.deviantart.net/fb6b/f/2014/128/4/6/dota2_sticker___earthshaker_by_chroneco-d7hkaqx.png") no-repeat center;
+    transition: width 0.2s, height 0.2s;
+}
+
+.main .section .article-3 div[class*="div-container-"] .div-3 {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main .section .article-3 div[class*="div-container-"]:hover .div-2 {
+    width: 0vw;
+    height: 0vw;
+}
+
+.main .section .article-3 div[class*="div-container-"]:hover .div-3 {
+    animation-name: exapandDiv3;
+    animation-duration: 2s;
+    background-color: #e1f5fe;
+    transition: background-color 2s;
+}
+
+@keyframes exapandDiv3 {
+    0% {
+        width: 0vw;
+        height: 0vw;
+        opacity: 0;
+    }
+    ;
+    50% {
+        opacity: 0.2
+    }
+    75% {
+        opacity: 0.7
+    }
+    100% {
+        width: 16vw;
+        height: 16vw;
+        opacity: 1;
+    }
+    ;
+}
