@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 1.5rem;
+    background-color: #80cbc4;
+}
+
+.main .section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .section article[class*="article-"]{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5rem 0rem 2.5rem 0rem;
+    padding: 2.5rem;
+}
+
+.main .section article[class*="article-"] div[class*="container-"]{
+    width: 30%;
+    height: 15vw;
+    position: relative;
+    perspective: 1000px;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo{
+    width: 100%;
+    height: 15vw;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo:hover{
+    transform: rotateX(90deg);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div{
+    width: 100%;
+    height: 15vw;
+    position: absolute;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.back{
+    background-color: #ffd740;
+    transform: rotateX(0deg) translateZ(-7.5vw);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.left{
+    width: 60%;
+    background-color: #dce775;
+    transform: rotateY(90deg) translateZ(-7.5vw);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.right{
+    width: 60%;
+    background-color: #ff6e40;
+    transform: rotateY(90deg) translateZ(17vw);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.top{
+    background-color: #8d6e63;
+    transform: rotateX(90deg) translateZ(7.5vw);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.bottom{
+    width: 100%;
+    background-color: #69f0ae;
+    text-align: center;
+    transform: rotateX(90deg) rotateY(180deg) rotate(180deg) translateZ(7.5vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.bottom div{
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    position: relative;
+    color: white;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.bottom div:nth-child(2){
+    width: 80%;
+    height: 2px;
+    background-color: white;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.bottom div:nth-child(4) a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.front{
+    width: 100%;
+    transform: rotateX(0deg) translateZ(7.5vw);
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.front figure{
+    width: 100%;
+    height: 15vw;
+}
+
+.main .section article[class*="article-"] div[class*="container-"] div.cubo div.front figure img{
+    width: 100%;
+    height: 100%;
+}
